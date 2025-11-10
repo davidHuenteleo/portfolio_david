@@ -1,18 +1,20 @@
 @use '../utils' as u;
 
 .wrapper {
+
+  /*Phone*/
   width: min(100% - var(--space-7), var(--container-max));
   margin-inline: auto;
 
-  border: solid rgb(50, 164, 73) 1px;
-
+  /*Modificador para la segunda clase*/
   &.has-padding {
     padding-block: var(--space-7);
 
+  /*Desktop */
     @include u.breakpoint(medium) {
-      padding-block: var(--space-9);
+      padding-block: var(--space-1);
 
-      border: solid rgb(201, 32, 216) 1px;
+      border: solid rgb(10, 0, 10) 1px;
     }
   }
 }
