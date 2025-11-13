@@ -1,21 +1,51 @@
 
-.navbar {
+.navbar{
   color: var(--color-text);
 
   width: 100%; /*antes estaba en auto*/
-  height: auto; 
+  height: auto;
 
   min-height: 60px;
   padding-block: var(--space-4);
   padding-inline: var(--space-4);
 
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: medium;
 
   //estilos que agregue! Mon 10 Nov / 25
-  display: grid;
-  place-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
   background-color: rgb(255, 236, 127);
+
+  // Estilos para los iconos
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: var(--space-2);
+    transition: opacity var(--duration-1) var(--easing-standard);
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      color: currentColor;
+    }
+
+    &--left {
+      margin-inline-end: auto;
+    }
+
+    &--right {
+      margin-inline-start: auto;
+    }
+  }
 }
 
 
@@ -23,10 +53,10 @@
   position: relative;
   display: flex;
 
-  border-radius: 99999px;
-  padding: 0.25rem;
+  border-radius: 99999px; /*cambiar a valor de libreria david*/
+  padding: 0.25rem; /*cambiar a valor de libreria david*/
 
-  color: white;
+  color: white; /*cambiar a valor de libreria david*/
   background-color: aquamarine;
 
   //eliminando decoracion
@@ -49,7 +79,7 @@
   font-size: 0.85rem;
   line-height: 1rem;
 
-  text-transform: uppercase;
+  /*Effect*/
   mix-blend-mode: difference;
 
 

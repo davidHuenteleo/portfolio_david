@@ -1,20 +1,13 @@
 //import styles SASS
 import "./styles/styles.scss"
 
-//import components
-import { Navbar } from './components/Navbar'
-import { Header } from './components/Header'
-import { Hero } from './components/Hero'
-import { Footer } from './components/Footer'
+//import pages
+import { HomePage } from './pages/HomePage'
 
 function App() {
   return (
     <>
-      <Navbar />
-
-      <Header />
-      <Hero />
-      <Footer />
+      <HomePage />
     </>
   )
 }

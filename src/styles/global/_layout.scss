@@ -6,6 +6,8 @@
   width: min(100% - var(--space-7), var(--container-max));
   margin-inline: auto;
 
+  background-color: rgb(140, 0, 0);
+
   /*Modificador para la segunda clase*/
   &.has-padding {
     padding-block: var(--space-7);
@@ -15,6 +17,7 @@
       padding-block: var(--space-1);
 
       border: solid rgb(10, 0, 10) 1px;
+      background-color: rgb(255, 0, 0);
     }
   }
 }

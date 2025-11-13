@@ -1,40 +1,52 @@
 @use '../utils' as u;
 
-.header {
-  padding-block: var(--space-4); /* ~16px */
+.header{
+  /* Habilita container queries para los descendientes */
+  container-type: inline-size;
+  container-name: header;
 
-  @include u.breakpoint(medium) {
-    padding-block: var(--space-5); /* 24px */
+  /* ocupe todo el ancho del viewport y se coloquen al final */
+  height: 90vh;
+  align-items: flex-end;
+
+  &.hero {
+    display: grid;
+
+    /* 24px por defecto (mobile-first) */
+    gap: var(--space-5);
+
+
+     /* Fallback por viewport */
+      @include u.breakpoint(medium) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-8); /* 48px */
+
+        background-color: rgb(19, 107, 162);
+      }
+
+      /* Encapsulación por contenedor */
+      @container header (min-width: #{u.em(700)}) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-8);
+      }
   }
 
-  &__items {
-    display: flex;
-    gap: 20px;
+  // Estilos para el contenido del hero
+  .hero-content {
     margin: 0;
-    padding: 0;
   }
 
-  &__item {
-    list-style-type: none;
-
-    &:first-child {
-      margin-inline-end: auto;
-    }
+  .hero-title {
+    margin-block-end: 500px;
   }
 
-  &__link {
-    @include u.fs-fluid(u.rem(375), u.rem(1100), u.rem(14), u.rem(16));
-    color: var(--color-text);
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    transition: color var(--duration-1) var(--easing-standard);
-
-    &:hover {
-      color: var(--color-accent);
-    }
+  // Estilos para la imagen hero - sin márgenes
+  .hero-img {
+    display: block;      // Elimina espacio inline
+    width: 100%;         // Ocupa todo el ancho
+    height: auto;        // Mantiene proporción
+    margin: 0;           // Sin márgenes
+    padding: 0;          // Sin padding
+    object-fit: cover;   // Ajuste de imagen
   }
 }
-
- //estilos que agrege! Mon 10 Nov / 25
-
