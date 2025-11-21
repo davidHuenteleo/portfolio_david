@@ -2,12 +2,12 @@
 
 @use '../utils' as u;
 
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
 
 /* estilos para la base */
 body {

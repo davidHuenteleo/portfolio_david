@@ -6,7 +6,7 @@
   container-name: header;
 
   /* ocupe todo el ancho del viewport y se coloquen al final */
-  height: 90vh;
+  height: 65vh;
   align-items: flex-end;
 
   &.hero {
@@ -37,16 +37,20 @@
   }
 
   .hero-title {
-    margin-block-end: 500px;
+    margin-block-end: 40%;
+    margin-left: 34px;
   }
 
-  // Estilos para la imagen hero - sin márgenes
+  // Estilos para la imagen hero - centrado horizontalmente, alineado al bottom
   .hero-img {
-    display: block;      // Elimina espacio inline
-    width: 100%;         // Ocupa todo el ancho
-    height: auto;        // Mantiene proporción
-    margin: 0;           // Sin márgenes
-    padding: 0;          // Sin padding
-    object-fit: cover;   // Ajuste de imagen
+    display: block;           // Elimina espacio inline
+    width: 62%;              // Ancho del video
+    height: auto;            // Mantiene proporción
+    margin-left: auto;       // Centra horizontalmente
+    margin-right: auto;      // Centra horizontalmente
+    margin-top: auto;        // Empuja hacia abajo (bottom)
+    padding: 0;              // Sin padding
+    object-fit: cover;       // Ajuste de imagen
+    align-self: end;         // Alinea al final verticalmente
   }
 }

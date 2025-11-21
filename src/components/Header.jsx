@@ -11,16 +11,20 @@ export const Header = () => {
              {/* hero-content */}
             <div className="hero-content" data-reveal="left">
                 <h1 className="h1 hero-title">
-                    hola
+                Hola, me llamo david 
                 </h1>
             </div>
 
 
-            <img
+            <video
                 src={HERO_IMG.image}
-                alt={HERO_IMG.title || "Hero banner"}
                 className="hero-img"
                 data-reveal="right"
+                autoPlay
+                loop
+                muted
+                playsInline
+                aria-label={HERO_IMG.title || "Hero video"}
             />
 
         </header >

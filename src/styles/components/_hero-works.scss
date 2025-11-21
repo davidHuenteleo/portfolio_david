@@ -1,0 +1,52 @@
+.heroWork{
+    border: solid 5px #86b586;
+    background-color: rgb(207, 207, 207);
+}
+
+
+.hero__content{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+
+    margin-top: 5rem;
+    margin-bottom: 450px;
+
+    border: solid 6px rgb(195, 192, 183);
+}
+
+
+.hero__title{
+    font-size: 3.75rem;
+    line-height: 1;
+    padding: 0.5rem;
+    margin-left: 300px;
+
+    color: aliceblue;
+}
+
+//styles images profile
+
+.hero__profile{
+    margin-left: 300px;
+
+    background-color: aquamarine;
+}
+
+.hero__profile-img{
+    display: inline;
+    margin-bottom: 12rem;
+
+    border: sandybrown 3px solid;
+}
+
+.hero_img{
+
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    border-radius: 1rem;
+    padding: 0.5rem;
+
+    border: solid 6px darkgoldenrod;
+}
