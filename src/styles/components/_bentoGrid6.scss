@@ -1,0 +1,116 @@
+@use '../utils' as u;
+
+.title{
+
+    text-align: center;
+    padding-block: 48px;
+
+    background-color: aqua;
+}
+
+.BentoGrid6{
+    display: grid;
+    gap: var(--space-5);
+    max-inline-size: 1200px;
+    margin-inline: auto;
+
+    grid-template-areas:
+            "one"
+            "two"
+            "three"
+            "four"
+            "five"
+            "six";
+
+    @media (width > 660px){
+        grid-template-areas:
+        "one one"
+        "two three"
+        "four six"
+        "four five";
+
+        background-color: rgb(19, 101, 164);
+    }
+
+    @media (width > 960px){
+        grid-template-areas:
+        "one two four"
+        "seven two three four"
+        "eight two three four"
+        "eight six five five";
+
+        background-color: rgb(0, 0, 0);
+    }
+
+
+}
+
+
+.BentoGrid6>*{
+    color: rgb(171, 74, 29);
+    padding: 32px;
+    background-color: rgb(167, 167, 167);
+    border-radius: 21px;
+
+    /*hacer un crop a la imagen interior*/
+    overflow: clip;
+    display: grid;
+    gap: 32px;
+    align-content: start;
+    align-items: start;
+    justify-items: start;
+    text-align: start;
+}
+
+/*styles por cards*/
+
+.BentoGrid6 img{
+    max-width: 100%;
+
+    border: solid red 4px;
+}
+
+/*styles por cards*/
+
+.BentoGrid6> :nth-child(1){
+    grid-area: one;
+
+
+    background-color: rgb(0, 255, 123);
+
+}
+
+.BentoGrid6> :nth-child(2){
+    grid-area: two;
+
+    background-color: rgb(138, 30, 30);
+
+}
+
+.BentoGrid6> :nth-child(3){
+    grid-area: three;
+
+    background-color: rgb(138, 30, 30);
+
+}
+
+.BentoGrid6> :nth-child(4){
+    grid-area: four;
+
+    background-color: rgb(216, 25, 175);
+
+}
+
+.BentoGrid6> :nth-child(5){
+    grid-area: five;
+
+    background-color: rgb(171, 176, 19);
+
+}
+
+.BentoGrid6> :nth-child(6){
+    grid-area: six;
+
+    background-color: rgb(216, 25, 175);
+
+}

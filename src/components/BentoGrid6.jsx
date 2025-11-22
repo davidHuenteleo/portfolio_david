@@ -1,8 +1,8 @@
 import { BENTO_IMG  } from "../styles/utils/data"
 
-export const BentoGrid8 = () => {
-  return (
-  <nav className="wrapper has-padding">
+export const BentoGrid6 = () => {
+    return (
+    <nav className="wrapper has-padding">
 
 
         <div className="title">
@@ -10,11 +10,11 @@ export const BentoGrid8 = () => {
             <p>Desde el 2018 hasta hoy</p>
         </div>
 
-      <div className="BentoGrid8">
+        <div className="BentoGrid6">
 
-          {/* grid 01 */}
-          <div>
-              <h1>1 - Social media</h1>
+        {/* grid 01 */}
+        <div>
+            <h1>1 - Social media</h1>
               <img
                 src={BENTO_IMG.images[0]}
                 alt={BENTO_IMG.title || "bento-img"}
@@ -78,32 +78,10 @@ export const BentoGrid8 = () => {
               <p>over 4000</p>
           </div>
 
-          {/* grid 07 */}
-          <div>
-              <h1>7 - Social media</h1>
-              <img
-                src={BENTO_IMG.images[6]}
-                alt={BENTO_IMG.title || "bento-img"}
-                className="bento-img"
-            />
-              <p>over 4000</p>
-          </div>
-
-          {/* grid 08 */}
-          <div>
-              <h1>8 - Social media</h1>
-              <img
-                src={BENTO_IMG.images[7]}
-                alt={BENTO_IMG.title || "bento-img"}
-                className="bento-img"
-            />
-              <p>over 4000</p>
-          </div>
-
 
       </div>
   </nav>
   )
   }
 
-export default BentoGrid8;
+export default BentoGrid6;

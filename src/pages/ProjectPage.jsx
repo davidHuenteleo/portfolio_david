@@ -1,15 +1,17 @@
 // Importar componentes desde la carpeta components
-import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
+import { BentoGrid8 } from '../components/BentoGrid8'
+import HeroWorks from '../components/HeroWorks'
 
-export const AboutMePage = () => {
+export const ProjectPage = () => {
     return (
     <>
-    <Header />
-    <Footer />
+        <HeroWorks />
+        <BentoGrid8 />
+        <Footer />
     </>
     )
 }
 
-export default AboutMePage
+export default ProjectPage
 

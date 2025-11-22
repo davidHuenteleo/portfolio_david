@@ -2,7 +2,7 @@
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 
-export const AboutMe = () => {
+export const AboutMePage = () => {
     return (
     <>
     <Header />
@@ -11,4 +11,4 @@ export const AboutMe = () => {
     )
 }
 
-export default AboutMe
+export default AboutMePage

@@ -10,6 +10,7 @@ export const Navbar = () => {
 // Armado de componentes
   return (
     <nav className="wrapper has-padding">
+
       <div className="navbar">
         {/* Icono izquierda */}
         <div className="navbar__icon navbar__icon--left">
@@ -24,6 +25,7 @@ export const Navbar = () => {
           <IconRight />
         </div>
       </div>
+
     </nav>
   )
 }
@@ -69,6 +71,7 @@ const IconRight = () => {
   )
 }
 
+
 const SlideTabs = () => {
   const [position, setPosition] = useState({
     left: 0,
@@ -100,9 +103,8 @@ const Tab = ({ children, setPosition}) => {
   return(
     <li
       ref={ref}
-      onMouseEnter={() => {
 
-        if(!ref.current) return;
+      onMouseEnter={() => { if(!ref.current) return;
 
         const {width} = ref.current.getBoundingClientRect();
 
@@ -112,6 +114,7 @@ const Tab = ({ children, setPosition}) => {
           left: ref.current.offsetLeft,
         });
       }}
+
       className="child">
       {children}
     </li>

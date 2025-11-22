@@ -8,16 +8,16 @@ import hero from "../../assets/images/image_header.mp4"
 //image for profile
 import mauro from "../../assets/images/ImageProfile/mauro.png"
 
-//images bentogrid8
-import bentoFavicon from "../../assets/images/bentogrid8/favicon-32x32.png"
-import bentoAiContent from "../../assets/images/bentogrid8/illustration-ai-content.webp"
-import bentoAudienceGrowth from "../../assets/images/bentogrid8/illustration-audience-growth.webp"
-import bentoConsistentSchedule from "../../assets/images/bentogrid8/illustration-consistent-schedule.webp"
-import bentoCreatePost from "../../assets/images/bentogrid8/illustration-create-post.webp"
-import bentoFiveStars from "../../assets/images/bentogrid8/illustration-five-stars.webp"
-import bentoGrowFollowers from "../../assets/images/bentogrid8/illustration-grow-followers.webp"
-import bentoMultiplePlatforms from "../../assets/images/bentogrid8/illustration-multiple-platforms.webp"
-import bentoSchedulePosts from "../../assets/images/bentogrid8/illustration-schedule-posts.webp"
+//images BentoGrid8
+import bentoFavicon from "../../assets/images/BentoGrid8/favicon-32x32.png"
+import bentoAiContent from "../../assets/images/BentoGrid8/illustration-ai-content.webp"
+import bentoAudienceGrowth from "../../assets/images/BentoGrid8/illustration-audience-growth.webp"
+import bentoConsistentSchedule from "../../assets/images/BentoGrid8/illustration-consistent-schedule.webp"
+import bentoCreatePost from "../../assets/images/BentoGrid8/illustration-create-post.webp"
+import bentoFiveStars from "../../assets/images/BentoGrid8/illustration-five-stars.webp"
+import bentoGrowFollowers from "../../assets/images/BentoGrid8/illustration-grow-followers.webp"
+import bentoMultiplePlatforms from "../../assets/images/BentoGrid8/illustration-multiple-platforms.webp"
+import bentoSchedulePosts from "../../assets/images/BentoGrid8/illustration-schedule-posts.webp"
 
 //image for Hero Works
 import heroWork from "../../assets/images/HeroImages/image_.png"
