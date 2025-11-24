@@ -5,8 +5,8 @@ import { Footer } from '../components/Footer'
 export const AboutMePage = () => {
     return (
     <>
-    <Header />
-    <Footer />
+        <Header />
+        <Footer />
     </>
     )
 }

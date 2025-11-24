@@ -24,17 +24,16 @@
 
     @media (width > 660px){
         grid-template-areas:
-        "one one"
-        "two three"
-        "four six"
-        "four five";
+        "one two"
+        "three four"
+        "five six";
 
         background-color: rgb(19, 101, 164);
     }
 
     @media (width > 960px){
         grid-template-areas:
-        "one two four"
+        "one two"
         "seven two three four"
         "eight two three four"
         "eight six five five";
