@@ -5,6 +5,9 @@ import '../styles/components/_navbar.scss';
 /*Framer Motion*/
 import { motion } from 'framer-motion';
 
+/*React Router*/
+import { NavLink, useNavigate } from 'react-router-dom';
+
 export const Navbar = () => {
 
 // Armado de componentes
@@ -12,6 +15,7 @@ export const Navbar = () => {
     <nav className="wrapper has-padding">
 
       <div className="navbar">
+
         {/* Icono izquierda */}
         <div className="navbar__icon navbar__icon--left">
           <IconLeft />
@@ -29,8 +33,6 @@ export const Navbar = () => {
     </nav>
   )
 }
-
-
 
 // Componente para el icono izquierdo
 const IconLeft = () => {
@@ -71,6 +73,12 @@ const IconRight = () => {
   )
 }
 
+const routes = [
+  { to: '/', label: 'Inicio' },
+  { to: '/', label: 'Trabajos', scrollTo: 'ContactMe' }, // ← Agregué scrollTo
+  { to: '/sobre-mi', label: 'Sobre mì' },
+  { to: '/projectos', label: 'Projectos' }
+]
 
 const SlideTabs = () => {
   const [position, setPosition] = useState({
@@ -80,48 +88,81 @@ const SlideTabs = () => {
   })
 
   return (
-    <ul onMouseLeave={() => {
-      setPosition((pv) => ({
-        ...pv,
-        opacity: 0,
-      }))
-    }} className="SlideTabs">
-      <Tab setPosition={setPosition}>Inicio</Tab>
-      <Tab setPosition={setPosition}>Trabajos</Tab>
-      <Tab setPosition={setPosition}>Sobre mì</Tab>
-      <Tab setPosition={setPosition}>Projectos</Tab>
-
+    <ul
+      onMouseLeave={() => {
+        setPosition((pv) => ({
+          ...pv,
+          opacity: 0,
+        }))
+      }}
+      className="SlideTabs"
+    >
+      {routes.map((route) => (
+        <Tab
+          key={route.to}
+          to={route.to}
+          setPosition={setPosition}
+          scrollTo={route.scrollTo}
+        >
+          {route.label}
+        </Tab>
+      ))}
       <Cursor position={position} />
     </ul>
   )
 }
 
-const Tab = ({ children, setPosition}) => {
+// eslint-disable-next-line react/prop-types
+const Tab = ({ children, to, setPosition, scrollTo }) => {
+  const ref = useRef(null)
+  const navigate = useNavigate()
 
-  const ref = useRef(null);
+  const handleClick = (e) => {
+    // Si tiene scrollTo, manejar el scroll
+    if (scrollTo) {
+      e.preventDefault()
+      
+      // Navegar a la ruta si no estamos ahí
+      const currentHash = window.location.hash.replace('#', '')
+      if (currentHash !== to) {
+        navigate(to)
+      }
+      
+      // Esperar un momento para que la página se cargue y luego hacer scroll
+      setTimeout(() => {
+        const element = document.getElementById(scrollTo)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+      }, 100)
+    }
+    // Si no tiene scrollTo, dejar que NavLink maneje la navegación normalmente
+  }
 
-  return(
+  return (
     <li
       ref={ref}
+      onMouseEnter={() => {
+        if (!ref.current) return
 
-      onMouseEnter={() => { if(!ref.current) return;
-
-        const {width} = ref.current.getBoundingClientRect();
+        const { width } = ref.current.getBoundingClientRect()
 
         setPosition({
           width,
           opacity: 1,
           left: ref.current.offsetLeft,
-        });
+        })
       }}
-
-      className="child">
-      {children}
+      className="child"
+    >
+      <NavLink to={to} onClick={handleClick}>
+        {children}
+      </NavLink>
     </li>
   )
 }
 
-
+// eslint-disable-next-line react/prop-types
 const Cursor = ({ position }) => {
   return(
     <motion.li
@@ -130,5 +171,6 @@ const Cursor = ({ position }) => {
     />
     );
 }
+
 
 export default Navbar;

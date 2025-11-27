@@ -11,7 +11,7 @@ export const Header = () => {
              {/* hero-content */}
             <div className="hero-content" data-reveal="left">
                 <h1 className="h1 hero-title">
-                Hola, me llamo david 
+                Hola, me llamo david
                 </h1>
             </div>
 

@@ -1,8 +1,10 @@
 import { BENTO_IMG  } from "../styles/utils/data"
+import { Link } from "react-router-dom"
 
 export const BentoGrid6 = () => {
-    return (
-    <nav className="wrapper has-padding">
+
+  return (
+    <nav id="ContactMe" className="wrapper has-padding">
 
 
         <div className="title">
@@ -10,78 +12,89 @@ export const BentoGrid6 = () => {
             <p>Desde el 2018 hasta hoy</p>
         </div>
 
-        <div className="BentoGrid6">
+      <div className="BentoGrid6">
 
         {/* grid 01 */}
-        <div>
+        <Link to="/ProjectPage">
+          <div>
             <h1>1 - Social media</h1>
-              <img
-                src={BENTO_IMG.images[0]}
-                alt={BENTO_IMG.title || "bento-img"}
-                className="bento-img"
+            <img
+              src={BENTO_IMG.images[0]}
+              alt={BENTO_IMG.title || "bento-img"}
+              className="bento-img"
             />
-              <p>over 4000</p>
+            <p>over 4000</p>
           </div>
+        </Link>
 
-          {/* grid 02 */}
+        {/* grid 02 */}
+        <Link to="/ProjectPage">
           <div>
-              <h1>2 - Social media</h1>
-              <img
-                src={BENTO_IMG.images[1]}
-                alt={BENTO_IMG.title || "bento-img"}
-                className="bento-img"
+            <h1>2 - Social media</h1>
+            <img
+              src={BENTO_IMG.images[1]}
+              alt={BENTO_IMG.title || "bento-img"}
+              className="bento-img"
             />
-              <p>over 4000</p>
+            <p>over 4000</p>
           </div>
+        </Link>
 
-          {/* grid 03 */}
+        {/* grid 03 */}
+        <Link to="/ProjectPage">
           <div>
-              <h1>3 - soy el texto</h1>
-              <img
-                src={BENTO_IMG.images[2]}
-                alt={BENTO_IMG.title || "bento-img"}
-                className="bento-img"
+            <h1>3 - soy el texto</h1>
+            <img
+              src={BENTO_IMG.images[2]}
+              alt={BENTO_IMG.title || "bento-img"}
+              className="bento-img"
             />
-              <p>over 4000</p>
+            <p>over 4000</p>
           </div>
+        </Link>
 
-          {/* grid 04 */}
+        {/* grid 04 */}
+        <Link to="/ProjectPage">
           <div>
-              <h1>4- Social media</h1>
-              <img
-                src={BENTO_IMG.images[3]}
-                alt={BENTO_IMG.title || "bento-img"}
-                className="bento-img"
+            <h1>4- Social media</h1>
+            <img
+              src={BENTO_IMG.images[3]}
+              alt={BENTO_IMG.title || "bento-img"}
+              className="bento-img"
             />
-              <p>over 4000</p>
+            <p>over 4000</p>
           </div>
+        </Link>
 
-          {/* grid 05 */}
+        {/* grid 05 */}
+        <Link to="/ProjectPage">
           <div>
-              <h1>5 - Social media</h1>
-              <img
-                src={BENTO_IMG.images[4]}
-                alt={BENTO_IMG.title || "bento-img"}
-                className="bento-img"
+            <h1>5 - Social media</h1>
+            <img
+              src={BENTO_IMG.images[4]}
+              alt={BENTO_IMG.title || "bento-img"}
+              className="bento-img"
             />
-              <p>over 4000</p>
+            <p>over 4000</p>
           </div>
+        </Link>
 
-          {/* grid 06 */}
+        {/* grid 06 */}
+        <Link to="/ProjectPage">
           <div>
-              <h1>6 - Social media</h1>
-              <img
-                src={BENTO_IMG.images[5]}
-                alt={BENTO_IMG.title || "bento-img"}
-                className="bento-img"
+            <h1>6 - Social media</h1>
+            <img
+              src={BENTO_IMG.images[5]}
+              alt={BENTO_IMG.title || "bento-img"}
+              className="bento-img"
             />
-              <p>over 4000</p>
+            <p>over 4000</p>
           </div>
-
+        </Link>
 
       </div>
-  </nav>
+    </nav>
   )
-  }
+}
 
 export default BentoGrid6;

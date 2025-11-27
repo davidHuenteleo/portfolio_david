@@ -1,6 +1,5 @@
 
 .navbar{
-  color: var(--color-text);
 
   width: 100%; /*antes estaba en auto*/
   height: auto;
@@ -17,7 +16,7 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-4);
-  background-color: rgb(255, 236, 127);
+  background-color: rgb(0, 0, 0);
 
   // Estilos para los iconos
   &__icon {
@@ -56,8 +55,8 @@
   border-radius: 99999px; /*cambiar a valor de libreria david*/
   padding: 0.25rem; /*cambiar a valor de libreria david*/
 
-  color: white; /*cambiar a valor de libreria david*/
-  background-color: aquamarine;
+  color: rgb(0, 0, 0); /*cambiar a valor de libreria david*/
+  background-color: rgb(255, 4, 4);
 
   //eliminando decoracion
   list-style-type: none;
@@ -79,14 +78,13 @@
   font-size: 0.85rem;
   line-height: 1rem;
 
-  /*Effect*/
-  mix-blend-mode: difference;
-
-
-  /*Cambia color del texto*/
-  --tw-text-opacity: ;
-  color: rgb(0 0 0 / var(--tw-border-opacity));
-
+  // Estilos para el NavLink (texto)
+  a {
+    display: block;
+    text-decoration: none;
+    color: rgb(255, 255, 255); // Color blanco para que difference lo invierta
+    mix-blend-mode: difference; // Aplicar aquí, en el texto
+  }
 }
 
 .Cursor{
