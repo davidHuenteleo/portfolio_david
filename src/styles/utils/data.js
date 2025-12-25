@@ -25,12 +25,12 @@ import heroWork from "../../assets/images/HeroImages/image_.png"
 //images Texts
 export const LINKS = [
     {
-    name: "Services",
-    link: "#services",
+        name: "Services",
+        link: "#services",
     },
     {
-    name: "Portfolio",
-    link: "#portfolio",
+        name: "Portfolio",
+        link: "#portfolio",
     },
 ];
 

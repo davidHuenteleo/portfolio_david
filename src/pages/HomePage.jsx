@@ -5,14 +5,18 @@ import { Footer } from '../components/Footer'
 
 import SocialLinks from '../components/SocialLinks'
 import BentoGrid6 from '../components/BentoGrid6'
+import Curve from '../components/Curve'
 
 export const HomePage = () => {
   return (
     <>
-      <Header />
-      <BentoGrid6 />
-      <SocialLinks />
-      <Footer />
+
+      <Curve>
+        <Header />
+        <BentoGrid6 />
+        <SocialLinks />
+        <Footer />
+      </Curve>
     </>
   )
 }

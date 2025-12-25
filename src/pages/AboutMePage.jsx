@@ -1,14 +1,16 @@
 // Importar componentes desde la carpeta components
-import { Footer } from '../components/Footer'
-import HeroWorks from '../components/HeroWorks'
+import Footer from '../components/Footer'
 import HeaderAboutMe from '../components/HeaderAboutMe'
+import Curve from '../components/Curve'
 
 export const AboutMePage = () => {
     return (
-    <>
-        <HeaderAboutMe />
-        <Footer />
-    </>
+        <>
+            <Curve>
+                <HeaderAboutMe />
+                <Footer />
+            </Curve>
+        </>
     )
 }
 

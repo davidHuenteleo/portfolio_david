@@ -1,8 +1,8 @@
 //import styles SASS
 import "./styles/styles.scss"
 
-//import React Router
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
 //import pages
 import { HomePage } from './pages/HomePage'
@@ -13,17 +13,23 @@ import { AboutMePage } from './pages/AboutMePage'
 import { Navbar } from './components/Navbar'
 
 function App() {
+
+  const location = useLocation();
+
   return (
-    <HashRouter>
+    <>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/trabajos" element={<ProjectPage />} />
-        <Route path="/sobre-mi" element={<AboutMePage />} />
-        <Route path="/projectos" element={<ProjectPage />} />
-        <Route path="/ProjectPage" element={<ProjectPage />} />
-      </Routes>
-    </HashRouter>
+
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/trabajos" element={<ProjectPage />} />
+          <Route path="/sobre-mi" element={<AboutMePage />} />
+          <Route path="/projectos" element={<ProjectPage />} />
+          <Route path="/projectPage" element={<ProjectPage />} />
+        </Routes>
+      </AnimatePresence>
+    </>
   )
 }
 
