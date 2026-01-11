@@ -1,4 +1,4 @@
-import { BENTO_IMG  } from "../styles/utils/data"
+import { BENTO_IMG } from "../styles/utils/data"
 
 import { Link } from 'react-router-dom'
 
@@ -7,38 +7,40 @@ export const BentoGrid8 = () => {
     <nav className="wrapper has-padding">
 
 
-        <div className="title">
-            <h1>Mi trabajo</h1>
-            <p>Desde el 2018 hasta hoy</p>
-        </div>
+      <div className="title">
+        <h1>Mi trabajo</h1>
+        <p>Desde el 2018 hasta hoy</p>
+      </div>
 
       <div className="BentoGrid8">
 
 
-          {/* grid 01 */}
-          <Link to="/ProjectPage">
-            <div>
-                <h1>1 - Social media</h1>
-                <img
-                  src={BENTO_IMG.images[0]}
-                  alt={BENTO_IMG.title || "bento-img"}
-                  className="bento-img"
-              />
-                <p>over 4000</p>
-            </div>
-          </Link>
+        {/* grid 01 */}
+        <Link to="/ProjectPage">
+          <div>
+            <h1>Birdi</h1>
+            <img
+              src={BENTO_IMG.images[0]}
+              alt={BENTO_IMG.title || "bento-img"}
+              className="bento-img"
+            />
+            <p>over 4000</p>
+          </div>
+        </Link>
 
 
         {/* grid 02 */}
-        <div>
-          <h1>2 - Social media</h1>
-          <img
-            src={BENTO_IMG.images[1]}
-            alt={BENTO_IMG.title || "bento-img"}
-            className="bento-img"
-          />
-          <p>over 4000</p>
-        </div>
+        <Link to="/BCHProject">
+          <div>
+            <h1>BCH</h1>
+            <img
+              src={BENTO_IMG.images[1]}
+              alt={BENTO_IMG.title || "bento-img"}
+              className="bento-img"
+            />
+            <p>over 4000</p>
+          </div>
+        </Link>
 
         {/* grid 03 */}
         <div>

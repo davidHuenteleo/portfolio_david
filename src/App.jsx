@@ -6,8 +6,12 @@ import { AnimatePresence } from 'framer-motion';
 
 //import pages
 import { HomePage } from './pages/HomePage'
-import { ProjectPage } from './pages/ProjectPage'
+import { Entrepreneurs } from './pages/Entrepreneurs'
 import { AboutMePage } from './pages/AboutMePage'
+
+import { BirdiProject } from './pages/BirdiProject'
+import { BCHProject } from './pages/BCHProject'
+
 
 //import components
 import { Navbar } from './components/Navbar'
@@ -21,13 +25,20 @@ function App() {
       <Navbar />
 
       <AnimatePresence mode="wait">
+
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<HomePage />} />
-          <Route path="/trabajos" element={<ProjectPage />} />
+          <Route path="/Entrepreneurs" element={<Entrepreneurs />} />
           <Route path="/sobre-mi" element={<AboutMePage />} />
-          <Route path="/projectos" element={<ProjectPage />} />
-          <Route path="/projectPage" element={<ProjectPage />} />
+
+          {/* BirdiProject */}
+          <Route path="/BirdiProject" element={<BirdiProject />} />
+
+          {/* BCHProject */}
+          <Route path="/BCHProject" element={<BCHProject />} />
+
         </Routes>
+
       </AnimatePresence>
     </>
   )

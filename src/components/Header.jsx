@@ -1,7 +1,5 @@
 import { HERO_IMG } from "../styles/utils/data"
 
-
-
 export const Header = () => {
     return (
         <div className="wrapper has-padding">
@@ -11,10 +9,9 @@ export const Header = () => {
                 {/* hero-content */}
                 <div className="hero-content" data-reveal="left">
                     <h1 className="h1 hero-title">
-                        Hola, me llamo david
+                        Hola, me llamo david oli birdi
                     </h1>
                 </div>
-
 
                 <video
                     src={HERO_IMG.image}

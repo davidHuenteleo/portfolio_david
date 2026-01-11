@@ -1,20 +1,26 @@
 // Importar componentes desde la carpeta components
 import { Footer } from '../components/Footer'
-import { BentoGrid8 } from '../components/BentoGrid8'
-import HeroWorks from '../components/HeroWorks'
+
+import SocialLinks from '../components/SocialLinks'
 import Curve from '../components/Curve'
 
-export const ProjectPage = () => {
+export const BirdiProject = () => {
     return (
         <>
+
             <Curve>
-                <HeroWorks />
-                <BentoGrid8 />
+
+                <div>
+                    <h1>BirdiProject</h1>
+                </div>
+
+
+                <SocialLinks />
                 <Footer />
             </Curve>
         </>
     )
 }
 
-export default ProjectPage
+export default BirdiProject
 

@@ -10,7 +10,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 
 export const Navbar = () => {
 
-// Armado de componentes
+  // Armado de componentes
   return (
     <nav className="wrapper has-padding">
 
@@ -77,8 +77,9 @@ const routes = [
   { to: '/', label: 'Inicio' },
   { to: '/', label: 'Trabajos', scrollTo: 'ContactMe' }, // ← Agregué scrollTo
   { to: '/sobre-mi', label: 'Sobre mì' },
-  { to: '/projectos', label: 'Projectos' }
+  { to: '/Entrepreneurs', label: 'Entrepreneurs' }
 ]
+
 
 const SlideTabs = () => {
   const [position, setPosition] = useState({
@@ -121,13 +122,13 @@ const Tab = ({ children, to, setPosition, scrollTo }) => {
     // Si tiene scrollTo, manejar el scroll
     if (scrollTo) {
       e.preventDefault()
-      
+
       // Navegar a la ruta si no estamos ahí
       const currentHash = window.location.hash.replace('#', '')
       if (currentHash !== to) {
         navigate(to)
       }
-      
+
       // Esperar un momento para que la página se cargue y luego hacer scroll
       setTimeout(() => {
         const element = document.getElementById(scrollTo)
@@ -164,12 +165,12 @@ const Tab = ({ children, to, setPosition, scrollTo }) => {
 
 // eslint-disable-next-line react/prop-types
 const Cursor = ({ position }) => {
-  return(
+  return (
     <motion.li
-        animate={position}
-        className="Cursor"
+      animate={position}
+      className="Cursor"
     />
-    );
+  );
 }
 
 

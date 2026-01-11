@@ -10,11 +10,11 @@ import { text, curve, translate } from '../styles/utils/anim_curve';
 import '../styles/components/_curve.scss';
 
 const routes = {
+
     "/": "Home",
     "/sobre-mi": "Sobre mí",
-    "/trabajos": "Trabajos",
-    "/projectos": "Proyectos",
-    "/contact": "Contacto"
+    "/contact": "Contacto",
+    "/Entrepreneurs": "Entrepreneurs",
 }
 
 const anim = (variants) => {

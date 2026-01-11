@@ -1,4 +1,4 @@
-import { BENTO_IMG  } from "../styles/utils/data"
+import { BENTO_IMG } from "../styles/utils/data"
 import { Link } from "react-router-dom"
 
 export const BentoGrid6 = () => {
@@ -7,15 +7,15 @@ export const BentoGrid6 = () => {
     <nav id="ContactMe" className="wrapper has-padding">
 
 
-        <div className="title">
-            <h1>Mi trabajo</h1>
-            <p>Desde el 2018 hasta hoy</p>
-        </div>
+      <div className="title">
+        <h1>Mi trabajo</h1>
+        <p>Desde el 2018 hasta hoy</p>
+      </div>
 
       <div className="BentoGrid6">
 
         {/* grid 01 */}
-        <Link to="/ProjectPage">
+        <Link to="/BirdiProject">
           <div>
             <h1>1 - Social media</h1>
             <img
@@ -28,7 +28,7 @@ export const BentoGrid6 = () => {
         </Link>
 
         {/* grid 02 */}
-        <Link to="/ProjectPage">
+        <Link to="/BCHProject">
           <div>
             <h1>2 - Social media</h1>
             <img
@@ -41,7 +41,7 @@ export const BentoGrid6 = () => {
         </Link>
 
         {/* grid 03 */}
-        <Link to="/ProjectPage">
+        <Link to="/">
           <div>
             <h1>3 - soy el texto</h1>
             <img
@@ -54,7 +54,7 @@ export const BentoGrid6 = () => {
         </Link>
 
         {/* grid 04 */}
-        <Link to="/ProjectPage">
+        <Link to="/">
           <div>
             <h1>4- Social media</h1>
             <img
@@ -67,7 +67,7 @@ export const BentoGrid6 = () => {
         </Link>
 
         {/* grid 05 */}
-        <Link to="/ProjectPage">
+        <Link to="/">
           <div>
             <h1>5 - Social media</h1>
             <img
@@ -80,7 +80,7 @@ export const BentoGrid6 = () => {
         </Link>
 
         {/* grid 06 */}
-        <Link to="/ProjectPage">
+        <Link to="/">
           <div>
             <h1>6 - Social media</h1>
             <img
