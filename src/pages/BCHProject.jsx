@@ -2,9 +2,12 @@
 import HeroWork from '../components/HeroWorks'
 import SocialLinks from '../components/SocialLinks'
 import Curve from '../components/Curve'
+import Herocover from '../components/Herocover'
 
 // Importar componentes desde la carpeta components
 import { Footer } from '../components/Footer'
+
+import { HERO_WORK } from '../styles/utils/data'
 
 export const BCHProject = () => {
 
@@ -12,11 +15,15 @@ export const BCHProject = () => {
         <>
             <Curve>
 
-                <HeroWork />
+                <HeroWork
+                    title="Banco de Chile"
+                    subtitle="Marketplace con Delivery de última milla"
+                />
 
-                <div>
-                    <h1>BCHProject</h1>
-                </div>
+                <Herocover
+                    image={HERO_WORK.image}
+                />
+
 
                 <SocialLinks />
                 <Footer />

@@ -1,19 +1,31 @@
 :root {
   /* Escala de espaciado */
-  --space-1: 0.25rem;  /* 4px */
-  --space-2: 0.5rem;   /* 8px */
-  --space-3: 0.75rem;  /* 12px */
-  --space-4: 1rem;     /* 16px */
-  --space-5: 1.5rem;   /* 24px */
-  --space-6: 2rem;     /* 32px */
-  --space-7: 2.5rem;   /* 40px */
-  --space-8: 3rem;     /* 48px */
-  --space-9: 3.75rem;  /* 60px */
+  --space-1: 0.25rem;
+  /* 4px */
+  --space-2: 0.5rem;
+  /* 8px */
+  --space-3: 0.75rem;
+  /* 12px */
+  --space-4: 1rem;
+  /* 16px */
+  --space-5: 1.5rem;
+  /* 24px */
+  --space-6: 2rem;
+  /* 32px */
+  --space-7: 2.5rem;
+  /* 40px */
+  --space-8: 3rem;
+  /* 48px */
+  --space-9: 3.75rem;
+  /* 60px */
 
   /* Radios */
-  --radius-sm: 0.25rem; /* 4px */
-  --radius-md: 0.5rem;  /* 8px */
-  --radius-lg: 1rem;    /* 16px */
+  --radius-sm: 0.25rem;
+  /* 4px */
+  --radius-md: 0.5rem;
+  /* 8px */
+  --radius-lg: 1rem;
+  /* 16px */
 
   /* Sombras */
   --shadow-1: 0 1px 2px hsl(0 0% 0% / 0.15);
@@ -28,11 +40,14 @@
 
   /* Tipografía */
   --font-family-base: Arial, Helvetica, sans-serif;
+
+  /* Tipografía weights */
   --font-weight-regular: 400;
   --font-weight-bold: 700;
 
   /* Container mi portfolio mide 1440px */
-  --container-max: 90rem; /* 1440px */
+  --container-max: 90rem;
+  /* 1440px */
 
   /* Motion */
   --duration-1: 150ms;

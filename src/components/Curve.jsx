@@ -1,4 +1,7 @@
 
+/* Para controlar la animacion, duracion, ir a /styles/utils/anim_curve */
+
+
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -11,10 +14,14 @@ import '../styles/components/_curve.scss';
 
 const routes = {
 
-    "/": "Home",
+    "/": "Inicio",
     "/sobre-mi": "Sobre mí",
     "/contact": "Contacto",
     "/Entrepreneurs": "Entrepreneurs",
+
+    "/BCHProject": "Banco de Chile",
+    "/PheroProject": "Phero",
+    "/BetterflyProject": "Betterfly",
 }
 
 const anim = (variants) => {
@@ -30,6 +37,8 @@ const anim = (variants) => {
 export default function Curve({ children, backgroundColor }) {
 
     const location = useLocation();
+    const displayTitle = location.state?.title || routes[location.pathname] || "";
+
 
     const [dimensions, setDimensions] = useState({
         width: null,
@@ -61,7 +70,7 @@ export default function Curve({ children, backgroundColor }) {
             <div style={{ opacity: dimensions.width == null ? 1 : 0 }} className='background' />
 
             <motion.p className="route" {...anim(text)}>
-                {routes[location.pathname]}
+                {displayTitle}
             </motion.p>
 
             {dimensions.width != null && <SVG {...dimensions} />}

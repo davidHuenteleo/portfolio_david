@@ -1,24 +1,23 @@
 
 /*importaciones*/
-import { HERO_WORK } from "../styles/utils/data";
 import { PROFILE_IMG } from "../styles/utils/data";
 
 import '../styles/components/_hero-works.scss';
 
-export const HeroWorks = () => {
+export const HeroWorks = ({ title, subtitle }) => {
     return (
-    <nav className="wrapper has-padding">
+        <nav id="HeroWorks" className="wrapper has-padding">
 
-        <div className="heroWork">
+            <div className="heroWork">
 
-            <div className="hero__content">
+                <div className="hero__content">
 
                     <div className="hero__title">
                         <h1>
-                            Marketplace con <br />Delivery de última <br /> milla
-                            </h1>
+                            {title}
+                        </h1>
 
-                            <p>doy un titulo</p>
+                        <p>{subtitle}</p>
                     </div>
 
 
@@ -28,45 +27,39 @@ export const HeroWorks = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Visita nuestra página de Facebook">
-                                <img
-                                    src={PROFILE_IMG.images[0]}
-                                    alt="Profile image"
-                                    className="hero__profile-img"/>
+                            <img
+                                src={PROFILE_IMG.images[0]}
+                                alt="Profile image"
+                                className="hero__profile-img" />
                         </a>
                         <a
                             href="https://www.facebook.com"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Visita nuestra página de Facebook">
-                                <img
-                                    src={PROFILE_IMG.images[0]}
-                                    alt="Profile image"
-                                    className="hero__profile-img"/>
+                            <img
+                                src={PROFILE_IMG.images[0]}
+                                alt="Profile image"
+                                className="hero__profile-img" />
                         </a>
                         <a
                             href="https://www.facebook.com"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Visita nuestra página de Facebook">
-                                <img
-                                    src={PROFILE_IMG.images[0]}
-                                    alt="Profile image"
-                                    className="hero__profile-img"/>
+                            <img
+                                src={PROFILE_IMG.images[0]}
+                                alt="Profile image"
+                                className="hero__profile-img" />
                         </a>
                     </div>
 
+                </div>
 
-
-                <img
-                    src={HERO_WORK.image}
-                    alt=""
-                    className="hero_img"/>
             </div>
-
-        </div>
-    </nav>
+        </nav>
     )
-    }
+}
 
 
 export default HeroWorks;

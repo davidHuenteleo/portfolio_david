@@ -3,8 +3,6 @@
 //image for Header
 import hero from "../../assets/images/image_header.mp4"
 
-
-
 //image for profile
 import mauro from "../../assets/images/ImageProfile/mauro.png"
 

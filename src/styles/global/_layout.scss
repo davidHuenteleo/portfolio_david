@@ -12,7 +12,7 @@
   &.has-padding {
     padding-block: var(--space-7);
 
-  /*Desktop */
+    /*Desktop */
     @include u.breakpoint(medium) {
       padding-block: var(--space-1);
 

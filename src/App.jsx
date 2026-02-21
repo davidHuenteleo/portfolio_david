@@ -11,7 +11,8 @@ import { AboutMePage } from './pages/AboutMePage'
 
 import { BirdiProject } from './pages/BirdiProject'
 import { BCHProject } from './pages/BCHProject'
-
+import { PheroProject } from './pages/PheroProject'
+import { BetterflyProject } from './pages/BetterflyProject'
 
 //import components
 import { Navbar } from './components/Navbar'
@@ -27,6 +28,7 @@ function App() {
       <AnimatePresence mode="wait">
 
         <Routes location={location} key={location.pathname}>
+
           <Route path="/" element={<HomePage />} />
           <Route path="/Entrepreneurs" element={<Entrepreneurs />} />
           <Route path="/sobre-mi" element={<AboutMePage />} />
@@ -36,6 +38,12 @@ function App() {
 
           {/* BCHProject */}
           <Route path="/BCHProject" element={<BCHProject />} />
+
+          {/* PheroProject */}
+          <Route path="/PheroProject" element={<PheroProject />} />
+
+          {/* BetterflyProject */}
+          <Route path="/BetterflyProject" element={<BetterflyProject />} />
 
         </Routes>
 

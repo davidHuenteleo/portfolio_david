@@ -1,9 +1,9 @@
 @use '../utils' as u; // Asegúrate de importar tus utils
 
 
-.heroWork {
+.heroCover {
     border: solid 5px #86b586;
-    background-color: rgb(1, 255, 208);
+    background-color: rgb(66, 188, 55);
 
     //responsive
     // Estilos SOLO para pantallas MENORES a 'medium' (aprox < 700px)
@@ -20,21 +20,12 @@
     flex-direction: column;
     align-items: left;
 
-    margin-top: 12rem;
-    margin-bottom: 4rem;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
 
     border: solid 6px rgb(195, 192, 183);
 }
 
-
-.hero__title {
-    font-size: 3.75rem;
-    line-height: 1;
-    padding: 0.5rem;
-    margin-left: 300px;
-
-    color: aliceblue;
-}
 
 //styles images profile 
 

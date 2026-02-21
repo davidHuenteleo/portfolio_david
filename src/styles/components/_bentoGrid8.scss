@@ -1,6 +1,6 @@
 @use '../utils' as u;
 
-.title{
+.title {
 
     text-align: center;
     padding-block: 48px;
@@ -15,33 +15,33 @@
     margin-inline: auto;
 
     grid-template-areas:
-            "one"
-            "two"
-            "three"
-            "four"
-            "five"
-            "six"
-            "seven"
-            "eight";
+        "one"
+        "two"
+        "three"
+        "four"
+        "five"
+        "six"
+        "seven"
+        "eight";
 
-    @media (width > 660px){
+    @media (width > 660px) {
         grid-template-areas:
-        "one one"
-        "two three"
-        "four six"
-        "four five"
-        "four five"
-        "seven eight";
+            "one one"
+            "two three"
+            "four six"
+            "four five"
+            "four five"
+            "seven eight";
 
         background-color: rgb(19, 101, 164);
     }
 
-    @media (width > 960px){
+    @media (width > 960px) {
         grid-template-areas:
-        "seven one one four"
-        "seven two three four"
-        "eight two three four"
-        "eight six five five";
+            "seven one one four"
+            "seven two three four"
+            "eight two three four"
+            "eight six five five";
 
         background-color: rgb(141, 185, 218);
     }
@@ -50,7 +50,7 @@
 }
 
 
-.BentoGrid8>*{
+.BentoGrid8>* {
     color: rgb(171, 74, 29);
     padding: 32px;
     background-color: rgb(167, 167, 167);
@@ -68,7 +68,7 @@
 
 /*styles por cards*/
 
-.BentoGrid8 img{
+.BentoGrid8 img {
     max-width: 100%;
 
     border: solid red 4px;
@@ -76,7 +76,7 @@
 
 /*styles por cards*/
 
-.BentoGrid8> :nth-child(1){
+.BentoGrid8> :nth-child(1) {
     grid-area: one;
 
 
@@ -84,49 +84,49 @@
 
 }
 
-.BentoGrid8> :nth-child(2){
+.BentoGrid8> :nth-child(2) {
     grid-area: two;
 
     background-color: rgb(138, 30, 30);
 
 }
 
-.BentoGrid8> :nth-child(3){
+.BentoGrid8> :nth-child(3) {
     grid-area: three;
 
     background-color: rgb(138, 30, 30);
 
 }
 
-.BentoGrid8> :nth-child(4){
+.BentoGrid8> :nth-child(4) {
     grid-area: four;
 
     background-color: rgb(216, 25, 175);
 
 }
 
-.BentoGrid8> :nth-child(5){
+.BentoGrid8> :nth-child(5) {
     grid-area: five;
 
     background-color: rgb(171, 176, 19);
 
 }
 
-.BentoGrid8> :nth-child(6){
+.BentoGrid8> :nth-child(6) {
     grid-area: six;
 
     background-color: rgb(216, 25, 175);
 
 }
 
-.BentoGrid8> :nth-child(7){
+.BentoGrid8> :nth-child(7) {
     grid-area: seven;
 
     background-color: rgb(125, 52, 110);
 
 }
 
-.BentoGrid8> :nth-child(8){
+.BentoGrid8> :nth-child(8) {
     grid-area: eight;
 
 

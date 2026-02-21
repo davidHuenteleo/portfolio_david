@@ -1,6 +1,6 @@
 @use '../utils' as u;
 
-.header{
+.header {
   /* Habilita container queries para los descendientes */
   container-type: inline-size;
   container-name: header;
@@ -16,19 +16,20 @@
     gap: var(--space-5);
 
 
-     /* Fallback por viewport */
-      @include u.breakpoint(medium) {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--space-8); /* 48px */
+    /* Fallback por viewport */
+    @include u.breakpoint(medium) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-8);
+      /* 48px */
 
-        background-color: rgb(19, 107, 162);
-      }
+      background-color: rgb(19, 107, 162);
+    }
 
-      /* Encapsulación por contenedor */
-      @container header (min-width: #{u.em(700)}) {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--space-8);
-      }
+    /* Encapsulación por contenedor */
+    @container header (min-width: #{u.em(700)}) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-8);
+    }
   }
 
   // Estilos para el contenido del hero
@@ -43,14 +44,15 @@
 
   // Estilos para la imagen hero - centrado horizontalmente, alineado al bottom
   .hero-img {
-    display: block;           // Elimina espacio inline
-    width: 62%;              // Ancho del video
-    height: auto;            // Mantiene proporción
-    margin-left: auto;       // Centra horizontalmente
-    margin-right: auto;      // Centra horizontalmente
-    margin-top: auto;        // Empuja hacia abajo (bottom)
-    padding: 0;              // Sin padding
-    object-fit: cover;       // Ajuste de imagen
-    align-self: end;         // Alinea al final verticalmente
+    display: block; // Elimina espacio inline
+    width: 62%; // Ancho del video
+    height: auto; // Mantiene proporción
+    margin-left: auto; // Centra horizontalmente
+    margin-right: auto; // Centra horizontalmente
+    margin-top: auto; // Empuja hacia abajo (bottom)
+    padding: 0; // Sin padding
+    object-fit: cover; // Ajuste de imagen
+    align-self: end; // Alinea al final verticalmente
+    //puede que aqui sea necesario agregar los breakpoints
   }
 }

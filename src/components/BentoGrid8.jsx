@@ -4,13 +4,7 @@ import { Link } from 'react-router-dom'
 
 export const BentoGrid8 = () => {
   return (
-    <nav className="wrapper has-padding">
-
-
-      <div className="title">
-        <h1>Mi trabajo</h1>
-        <p>Desde el 2018 hasta hoy</p>
-      </div>
+    <nav id="BentoGrid6" className="wrapper has-padding">
 
       <div className="BentoGrid8">
 

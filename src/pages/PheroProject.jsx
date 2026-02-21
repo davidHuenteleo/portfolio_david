@@ -2,19 +2,20 @@
 import HeroWork from '../components/HeroWorks'
 import { Footer } from '../components/Footer'
 import { HERO_WORK } from '../styles/utils/data'
-import Curve from '../components/Curve'
 import Herocover from '../components/Herocover'
 import SocialLinks from '../components/SocialLinks'
+import Curve from '../components/Curve'
 
-export const BirdiProject = () => {
+
+export const PheroProject = () => {
     return (
         <>
 
             <Curve>
 
                 <HeroWork
-                    title="Birdi"
-                    subtitle="Descripción del proyecto Birdi"
+                    title="Phero"
+                    subtitle="Marketplace con Delivery de última milla"
                 />
 
                 <Herocover
@@ -28,5 +29,5 @@ export const BirdiProject = () => {
     )
 }
 
-export default BirdiProject
+export default PheroProject
 
