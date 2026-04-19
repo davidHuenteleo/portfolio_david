@@ -75,7 +75,7 @@ const IconRight = () => {
 
 const routes = [
   { to: '/', label: 'Inicio' },
-  { to: '/', label: 'Trabajos', scrollTo: 'ContactMe' }, // ← Agregué scrollTo
+  { to: '/#ContactMe', label: 'Trabajos', scrollTo: 'ContactMe' },
   { to: '/sobre-mi', label: 'Sobre mì' },
   { to: '/Entrepreneurs', label: 'Entrepreneurs' }
 ]
@@ -118,26 +118,9 @@ const Tab = ({ children, to, setPosition, scrollTo }) => {
   const ref = useRef(null)
   const navigate = useNavigate()
 
-  const handleClick = (e) => {
-    // Si tiene scrollTo, manejar el scroll
-    if (scrollTo) {
-      e.preventDefault()
-
-      // Navegar a la ruta si no estamos ahí
-      const currentHash = window.location.hash.replace('#', '')
-      if (currentHash !== to) {
-        navigate(to)
-      }
-
-      // Esperar un momento para que la página se cargue y luego hacer scroll
-      setTimeout(() => {
-        const element = document.getElementById(scrollTo)
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-        }
-      }, 100)
-    }
-    // Si no tiene scrollTo, dejar que NavLink maneje la navegación normalmente
+  const handleClick = () => {
+    // Ya no manejamos el scroll aquí manualmente para evitar conflictos
+    // ScrollToTop se encargará de todo basándose en la URL (hash)
   }
 
   return (
@@ -154,6 +137,7 @@ const Tab = ({ children, to, setPosition, scrollTo }) => {
           left: ref.current.offsetLeft,
         })
       }}
+
       className="child"
     >
       <NavLink to={to} onClick={handleClick}>

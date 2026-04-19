@@ -16,6 +16,7 @@ import { BetterflyProject } from './pages/BetterflyProject'
 
 //import components
 import { Navbar } from './components/Navbar'
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop />
       <Navbar />
 
       <AnimatePresence mode="wait">

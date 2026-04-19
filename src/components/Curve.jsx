@@ -19,6 +19,7 @@ const routes = {
     "/contact": "Contacto",
     "/Entrepreneurs": "Entrepreneurs",
 
+    "/BirdiProject": "Birdi",
     "/BCHProject": "Banco de Chile",
     "/PheroProject": "Phero",
     "/BetterflyProject": "Betterfly",

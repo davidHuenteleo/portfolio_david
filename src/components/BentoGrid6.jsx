@@ -9,7 +9,7 @@ export const BentoGrid6 = () => {
       <div className="BentoGrid6">
 
         {/* grid 01 */}
-        <Link to="/BirdiProject" state={{ title: "propbando el mensaje oe" }}>
+        <Link to="/BirdiProject" state={{ title: "Birdi" }}>
           <div>
             <h1>Birdi</h1>
             <img
@@ -22,7 +22,7 @@ export const BentoGrid6 = () => {
         </Link>
 
         {/* grid 02 */}
-        <Link to="/BCHProject">
+        <Link to="/BCHProject" state={{ title: "Banco de Chile" }}>
           <div>
             <h1>Banco de chile</h1>
             <img
@@ -35,7 +35,7 @@ export const BentoGrid6 = () => {
         </Link>
 
         {/* grid 03 */}
-        <Link to="/PheroProject">
+        <Link to="/PheroProject" state={{ title: "Phero" }}>
           <div>
             <h1>Phero</h1>
             <img
@@ -48,7 +48,7 @@ export const BentoGrid6 = () => {
         </Link>
 
         {/* grid 04 */}
-        <Link to="/BetterflyProject">
+        <Link to="/BetterflyProject" state={{ title: "Betterfly" }}>
           <div>
             <h1>Betterfly</h1>
             <img
@@ -61,7 +61,7 @@ export const BentoGrid6 = () => {
         </Link>
 
         {/* grid 05 */}
-        <Link to="/">
+        <Link to="/" state={{ title: "Inicio" }}>
           <div>
             <h1></h1>
             <img
@@ -74,7 +74,7 @@ export const BentoGrid6 = () => {
         </Link>
 
         {/* grid 06 */}
-        <Link to="/">
+        <Link to="/" state={{ title: "Social Media" }}>
           <div>
             <h1>6 - Social media</h1>
             <img
