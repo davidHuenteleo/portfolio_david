@@ -6,7 +6,7 @@ import '../styles/components/_navbar.scss';
 import { motion } from 'framer-motion';
 
 /*React Router*/
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 export const Navbar = () => {
 
@@ -116,12 +116,25 @@ const SlideTabs = () => {
 // eslint-disable-next-line react/prop-types
 const Tab = ({ children, to, setPosition, scrollTo }) => {
   const ref = useRef(null)
-  const navigate = useNavigate()
+  const location = useLocation()
 
   const handleClick = () => {
-    // Ya no manejamos el scroll aquí manualmente para evitar conflictos
-    // ScrollToTop se encargará de todo basándose en la URL (hash)
+    const alreadyOnTarget =
+      scrollTo &&
+      location.pathname === '/';
+    location.hash === `#${scrollTo}`;
+
+    if (alreadyOnTarget) {
+      event.preventDefault();
+
+      document.getElementById(scrollTo)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
   }
+
+
 
   return (
     <li
