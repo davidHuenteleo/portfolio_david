@@ -17,8 +17,17 @@
 }
 
 $breakpoints: (
+  'small': f.em(480),
+  // Móviles grandes / Phablets
+
   'medium': f.em(700),
+  // Tablets (iPad vertical)
+
   'large': f.em(1200),
+  // Laptops / Tablets horizontales
+
+  'x-large': f.em(1440),
+  // Escritorios grandes
 );
 
 @mixin breakpoint($size) {

@@ -6,7 +6,7 @@ export const Herotext = () => {
     <nav id="Herotext" className="wrapper has-padding">
 
       <div className="title">
-        <h1>Mi trabajo</h1>
+        <h1>Mi trabajo oli</h1>
         <p>Desde el 2018 hasta hoy</p>
       </div>
 

@@ -1,58 +1,105 @@
 @use '../utils' as u;
 
 .header {
-  /* Habilita container queries para los descendientes */
-  container-type: inline-size;
-  container-name: header;
+  // Contenedor para el header
+  position: relative;
+  height: 64svh;
 
-  /* ocupe todo el ancho del viewport y se coloquen al final */
-  height: 65vh;
-  align-items: flex-end;
+  // `svh` evita saltos visuales por la barra del navegador móvil.
+  min-height: 65svh;
+
 
   &.hero {
     display: grid;
-
-    /* 24px por defecto (mobile-first) */
-    gap: var(--space-5);
-
-
-    /* Fallback por viewport */
-    @include u.breakpoint(medium) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--space-8);
-      /* 48px */
-
-      background-color: rgb(19, 107, 162);
-    }
-
-    /* Encapsulación por contenedor */
-    @container header (min-width: #{u.em(700)}) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--space-8);
-    }
+    grid-template-rows: 1fr auto;
+    gap: 0;
+    overflow: hidden;
   }
 
-  // Estilos para el contenido del hero
   .hero-content {
-    margin: 0;
+    position: relative;
+    align-self: end;
+    z-index: 1;
   }
 
   .hero-title {
-    margin-block-end: 40%;
-    margin-left: 34px;
+    //margin: 10px;
+    padding: var(--space-6) var(--space-4);
   }
 
-  // Estilos para la imagen hero - centrado horizontalmente, alineado al bottom
   .hero-img {
-    display: block; // Elimina espacio inline
-    width: 62%; // Ancho del video
-    height: auto; // Mantiene proporción
-    margin-left: auto; // Centra horizontalmente
-    margin-right: auto; // Centra horizontalmente
-    margin-top: auto; // Empuja hacia abajo (bottom)
-    padding: 0; // Sin padding
-    object-fit: cover; // Ajuste de imagen
-    align-self: end; // Alinea al final verticalmente
-    //puede que aqui sea necesario agregar los breakpoints
+    display: block;
+    justify-self: center;
+    align-self: end;
+    width: min(84vw, 22rem);
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+    // Solo es necesario si el video tiene dimensiones fijas.
+    object-fit: contain;
+  }
+
+
+  //para ver las medidas ir a -> /utils/_mixins.scss
+
+  //estilos mobile
+  @include u.breakpoint-down(small) {
+
+    &.hero {
+      background-color: rgb(255, 255, 255);
+
+      .hero-title {
+        font-size: 2rem;
+
+      }
+
+      .hero-img {
+        width: min(85%, 28rem);
+        align-self: end;
+      }
+    }
+  }
+
+  //estilos tablet
+  @include u.breakpoint(medium) {
+    &.hero {
+      background-color: rgb(153, 153, 153);
+
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-rows: 1fr;
+      gap: var(--space-8);
+    }
+
+    .hero-content {
+      align-self: end;
+    }
+
+    .hero-title {
+      padding: var(--space-6);
+    }
+
+    .hero-img {
+      width: min(100%, 80rem);
+      align-self: end;
+    }
+  }
+
+  //estilos laptop
+  @include u.breakpoint(large) {
+    &.hero {
+      background-color: purple;
+
+
+    }
+  }
+
+  //estilos desktop
+  @include u.breakpoint(x-large) {
+    &.hero {
+      background-color: green;
+
+
+    }
   }
 }
